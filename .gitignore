@@ -94,8 +94,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-*.csproj
-*.sln
+
 
 
 
