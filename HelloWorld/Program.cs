@@ -1,12 +1,20 @@
-﻿using System;
+﻿using System; //importing namespaces
 
-namespace HelloWorld
+namespace HelloWorld //name space name
 {
-    class Program
+    class Program //class name
     {
-        static void Main(string[] args)
+        static void Main(string[] args) //method declaration
         {
-            Console.WriteLine("Hello World!");
+            string hello = "Hello ";
+            Console.Write("{0}", hello);
+            funcWorld();
+            
         }
+
+        static void funcWorld() //extra method (NOT MAIN)
+            {
+            Console.WriteLine("World!");
+            }
     }
 }
