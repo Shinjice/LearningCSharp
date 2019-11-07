@@ -15,7 +15,7 @@ namespace Variables
             string lastname = "Johnson"; //var declared and initialized
             Console.WriteLine("name of string: {0} {1}", name, lastname);
 
-            int a = 6, b = 8, c = 2, d = 0; //multi declaration, can 
+            int a = 6, b = 8, c = 2, d = 0; //multi declaration, VAR cannot do this
             int tam, 
                 tri, 
                 mai;    //can be on more lines till semicolon
@@ -47,6 +47,36 @@ namespace Variables
             int l = int k;
             Console.WriteLine(k);
             */
+
+            int u = 100; //explicitly
+            var k = 100; //implicitly
+
+            //samples how var mostly will automaticly be determined
+            var z = 10;
+            Console.WriteLine("type of z is {0}", z.GetType().ToString());
+            var x = "helloWorld";
+            Console.WriteLine("type of x is {0}", x.GetType().ToString());
+            var n = 10.10;
+            Console.WriteLine("type of n is {0}", n.GetType().ToString());
+            var v = true;
+            Console.WriteLine("type of v is {0}", v.GetType().ToString());
+
+
+            /* Notes
+             *var can not be used in function parameters, field type at the class level
+             *  Var can be used in;
+             *      Local variable in a function
+             *      foreach loop
+             *      using statement
+             *      as anoymous type
+             *      in a LINQ query expression
+             *      
+             *      Not valid;
+             *      var i; i=10;
+             *      var i += 10;
+             *      var i =10, j=10;
+             */
+
 
         }
 
