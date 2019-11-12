@@ -26,8 +26,87 @@ namespace DataTypes
             string  A sequence of Unicode characters
             DateTime Represents date and time 0:00:00am 1/1/01 to 11:59:59pm 12/31/9999
             */
+
+            /*
+            Value Suffix
             
-            Console.WriteLine("Hello World!");
+            uint ui = 100u;
+            float fl = 10.2f;
+            long l = 45755452222222l;
+            ulong ul = 45755452222222ul;
+            double d = 11452222.555d;
+            decimal mon = 1000.15m;
+
+            float num = 3; is assigned as float, compiler will see it as int (implicit conversion), can cause loss in precision
+            float num = 3.0; compiler will see it as double
+            float num = 3.0f: compiler will handle 3.0 as float
+            float num = (float)3.0; explicit cast
+            */
+
+
+            /*
+            Alias vs .NET Type
+
+            byte	        System.Byte	struct
+            sbyte	        System.SByte	struct
+            int	            System.Int32	struct (so int is same is Int32)
+            uint	        System.UInt32	struct
+            short	        System.Int16	struct
+            ushort	        System.UInt16	struct
+            long	        System.Int64	struct
+            ulong	        System.UInt64	struct
+            float	        System.Single	struct
+            double	        System.Double	struct
+            char	        System.Char	    struct
+            bool	        System.Boolean	struct
+            object	        System.Object	Class
+            string	        System.String	Class
+            decimal	        System.Decimal	struct
+            DateTime	    System.DateTime	struct
+            */
+
+            /*
+            Default Value
+
+            int i = default(int); // 0
+            float f = default(float);// 0
+            decimal d = default(decimal);// 0
+            bool b = default(bool);// false
+            char c = default(char);// '\0'
+            
+            // C# 7.1 onwards
+            int i = default; // 0
+            float f = default;// 0
+            decimal d = default;// 0
+            bool b = default;// false
+            char c = default;// '\0'    
+            */
+
+            int i = 345;
+            float f = i; //implicit conversion; will convert because its predifined
+            uint u = (uint) i; //explicit converon; not predifened so you have to assign type of data
+
+            Console.WriteLine("Type of i is {0}", i.GetType().ToString());
+            Console.WriteLine("Type of i is {0}", f.GetType().ToString());
+            Console.WriteLine("Type of i is {0}", u.GetType().ToString());
+
+            /*
+             
+            Implicit Conversion From	To
+            sbyte	                    short, int, long, float, double, decimal
+            byte	                    short, ushort, int, uint, long, ulong, float, double, decimal
+            short	                    int, long, float, double, or decimal
+            ushort	                    int, uint, long, ulong, float, double, or decimal
+            int	                        long, float, double, or decimal.
+            uint	                    long, ulong, float, double, or decimal
+            long	                    float, double, or decimal
+            ulong	                    float, double, or decimal
+            char	                    ushort, int, uint, long, ulong, float, double, or decimal
+            float	                    Double
+
+            */
+
+
         }
     }
 }
