@@ -1,3 +1,5 @@
+git status (status)
+git diff (difference)
 git add . (adds all corrected files)
 git commit -m 'comment' (to commit files in repositories)
 git push (push repository online)
